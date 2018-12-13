@@ -44,7 +44,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## CONFIGURING THE FIREBASE
-# CREATE .env file
+### CREATE .env file
 
 Inside .env file add the following constants of firebase config (with no space or ,)
 ```
@@ -56,6 +56,6 @@ REACT_APP_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE
 REACT_APP_MESSAGING_SENDER_ID=YOUR_FIREBASE_MESSAGIN_SENDER_ID
 ```
 
-# IMPORT DATABASE STRUCTURE
+### IMPORT DATABASE STRUCTURE
 
 You must import the database structure, located at documentation/database-structure
