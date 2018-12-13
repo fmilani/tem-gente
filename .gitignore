@@ -322,6 +322,8 @@ yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
+#REMOVE YARN LOCK FILE
+yarn.lock
 
 /coverage
 # End of https://www.gitignore.io/api/node,firebase,reactnative

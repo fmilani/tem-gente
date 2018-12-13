@@ -43,4 +43,19 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## MISSING FIREBASE CONFIRGURATION
+## CONFIGURING THE FIREBASE
+# CREATE .env file
+
+Inside .env file add the following constants of firebase config (with no space or ,)
+```
+REACT_APP_API_KEY=YOUR_FIREBASE_APP_KEY
+REACT_APP_AUTH_DOMAIN=YOUR_FIREBASE_DOMAIN
+REACT_APP_DATABASE_URL=YOUR_FIREBASE_URL
+REACT_APP_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+REACT_APP_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE
+REACT_APP_MESSAGING_SENDER_ID=YOUR_FIREBASE_MESSAGIN_SENDER_ID
+```
+
+# IMPORT DATABASE STRUCTURE
+
+You must import the database structure, located at documentation/database-structure
