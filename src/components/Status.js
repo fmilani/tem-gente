@@ -3,7 +3,7 @@ import FirebaseApi from '../api/FirebaseApi';
 
 class Status extends Component {
   state = {
-    ocupado: true,
+    ocupado: 'carregando',
   };
 
   componentDidMount() {
@@ -14,17 +14,17 @@ class Status extends Component {
 
   render() {
     const { ocupado } = this.state;
-    const { canChange } = this.props;
+    const { canChange } = !!this.props;
     return (
       <div
         className="Page"
-        style={{ backgroundColor: ocupado ? 'red' : 'green' }}
+        style={{ backgroundColor: !!ocupado ?  ocupado === 'carregando' ?  'gray' : 'red' : 'green' }}
         onClick={() => {
           if (!canChange) return;
           FirebaseApi.setStatus('banheiros/geral-23', !ocupado);
         }}
       >
-        <p>{ocupado ? 'Tem gente' : 'Tá Livre'}</p>
+        <p>{!!ocupado ? ocupado === 'carregando' ? 'Carregando, por favor aguarde' : 'Tem gente' : 'Está Livre'}</p>
       </div>
     );
   }
