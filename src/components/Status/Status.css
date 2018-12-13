@@ -1,0 +1,9 @@
+.ocupado{
+    background-color: red;
+}
+.carregando{
+    background-color: gray;
+}
+.livre{
+    background-color: green;
+}

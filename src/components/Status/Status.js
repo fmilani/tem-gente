@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FirebaseApi from '../api/FirebaseApi';
+import FirebaseApi from '../../api/FirebaseApi';
+import './Status.css';
 
 class Status extends Component {
   state = {
@@ -17,8 +18,7 @@ class Status extends Component {
     const { canChange } = !!this.props;
     return (
       <div
-        className="Page"
-        style={{ backgroundColor: !!ocupado ?  ocupado === 'carregando' ?  'gray' : 'red' : 'green' }}
+        className={"Page "+(!!ocupado ? ocupado === 'carregando' ? 'carregando' : 'ocupado' : 'livre')}
         onClick={() => {
           if (!canChange) return;
           FirebaseApi.setStatus('banheiros/geral-23', !ocupado);
