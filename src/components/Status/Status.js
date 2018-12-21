@@ -15,10 +15,10 @@ class Status extends Component {
 
   render() {
     const { ocupado } = this.state;
-    const { canChange } = !!this.props;
+    const { canChange } = this.props;
     return (
       <div
-        className={"Page "+(!!ocupado ? ocupado === 'carregando' ? 'carregando' : 'ocupado' : 'livre')}
+        className={"Page "+(ocupado ? (ocupado === 'carregando' ? 'carregando' : 'ocupado') : 'livre')}
         onClick={() => {
           if (!canChange) return;
           FirebaseApi.setStatus('banheiros/geral-23', !ocupado);
