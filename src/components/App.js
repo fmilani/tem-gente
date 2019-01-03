@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router';
-import Status from './Status';
+import Status from './Status/Status';
 
 import './App.css';
 

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import FirebaseApi from '../api/FirebaseApi';
+import FirebaseApi from '../../api/FirebaseApi';
+import './Status.css';
 
 class Status extends Component {
   state = {
-    ocupado: true,
+    ocupado: 'carregando',
   };
 
   componentDidMount() {
@@ -17,14 +18,13 @@ class Status extends Component {
     const { canChange } = this.props;
     return (
       <div
-        className="Page"
-        style={{ backgroundColor: ocupado ? 'red' : 'green' }}
+        className={"Page "+(ocupado ? (ocupado === 'carregando' ? 'carregando' : 'ocupado') : 'livre')}
         onClick={() => {
           if (!canChange) return;
           FirebaseApi.setStatus('banheiros/geral-23', !ocupado);
         }}
       >
-        <p>{ocupado ? 'Tem gente' : 'Tá Livre'}</p>
+        <p>{!!ocupado ? ocupado === 'carregando' ? 'Carregando, por favor aguarde' : 'Tem gente' : 'Está Livre'}</p>
       </div>
     );
   }
